@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>
+                scope array
+            </Title>
+			<Shortcut>
+			    sca
+			</Shortcut>
+        </Header>
+        <Snippet>
+           <Declarations>
+                <Literal><ID>a</ID><Default>Name</Default></Literal>
+				<Literal><ID>b</ID><Default>Name</Default></Literal>
+                <Literal><ID>c</ID><Default>Name</Default></Literal>
+            </Declarations>
+            <Code Language="JavaScript">
+                <![CDATA[$$scope.$a$ = [
+					{$b$:$c$}$end$
+				];]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
+<!-- C:\Users\duc.nguyen\Documents\Visual Studio 2013\Code Snippets\JavaScript\My Code Snippets -->
