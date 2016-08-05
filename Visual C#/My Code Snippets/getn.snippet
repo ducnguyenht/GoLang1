@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>getn</Title>
+      <Author>admin</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>getn</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ImageLibs</ID>
+          <ToolTip>ImageLibs</ToolTip>
+          <Default>ImageLibs</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ApiImageLib</ID>
+          <ToolTip>ApiImageLib</ToolTip>
+          <Default>ApiImageLib</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>MemoryImageLib</ID>
+          <ToolTip>MemoryImageLib</ToolTip>
+          <Default>MemoryImageLib</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[   public IEnumerable<$ApiImageLib$> Read$ImageLibs$()
+    {
+        return $MemoryImageLib$.Datas;
+    }
+    [Route(""), HttpGet]
+    public async Task<IEnumerable<$ApiImageLib$>> Get$ImageLibs$()
+    {
+        return await Task.FromResult(Read$ImageLibs$());
+    }$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

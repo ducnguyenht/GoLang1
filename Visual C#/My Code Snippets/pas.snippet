@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>posa</Title>
+      <Author>admin</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>posa</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Name</ID>
+          <ToolTip>Name</ToolTip>
+          <Default>Name</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Name1</ID>
+          <ToolTip>Name1</ToolTip>
+          <Default>Name1</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[public IHttpActionResult Create([FromBody] Api$Name$ $Name1$)
+{
+	if ($Name1$ == null)
+	{
+		return NotFound();
+	}
+	try
+	{
+		Memory$Name$.Datas.Add($Name1$);
+	}
+	catch (Exception)
+	{
+		return NotFound();
+	}
+	return Ok($Name1$);
+}
+      
+[Route(""), HttpPost]
+public async Task<IHttpActionResult> PostAsync([FromBody]Api$Name$ $Name1$)
+{
+	return await Task.FromResult(Create($Name1$));
+}$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
