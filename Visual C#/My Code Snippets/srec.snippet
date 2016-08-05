@@ -5,13 +5,13 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>gbid</Title>
+      <Title>srec</Title>
       <Author>admin</Author>
       <Description>
       </Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>gbid</Shortcut>
+      <Shortcut>srec</Shortcut>
     </Header>
     <Snippet>
       <Declarations>
@@ -23,15 +23,8 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp" Delimiter="$"><![CDATA[public IEnumerable<Api$Name$> Read$Name$ById([FromUri]string id)
-{
-    return Memory$Name$.Datas.Where(t => t.Id == id);
-}
-[Route(""), HttpGet]
-public async Task<IEnumerable<Api$Name$>> Get$Name$ById([FromUri]string id)
-{
-    return await Task.FromResult(Read$Name$ById(id));
-}]]></Code>
+      <Code Language="csharp" Delimiter="$"><![CDATA[#region $Name$
+#endregion $Name$]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
